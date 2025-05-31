@@ -1,5 +1,7 @@
 # CTFd First Blood Announcer
 
+*Forked from [this repo.](https://github.com/Nissen96/First-Blood-Announcer)*
+
 Continually monitor a CTFd instance and announce first bloods to a Discord channel via webhook.
 
 By default, skips first bloods achieved before the script was run but can be configured to announce the existing as well.
@@ -30,24 +32,6 @@ To change the announcement message, update the `ANNOUNCEMENT` constant in the to
 Use `{challenge}` and `{user}` where the challenge title and username should be inserted.
 
 ## Setup
-
-The script requires Python 3 and uses a single (very common) external dependency:
-
-```
-pip install requests
-```
-
-Optionally install `dotenv` to automatically read environment variables from a .env-file:
-
-```
-pip install python-dotenv
-```
-
-Then simply run with
-
-```
-python first-blood-announcer.py [OPTIONS]
-```
 
 To create a Discord webhook URL, go to `Server Settings` -> `Integrations` -> `Webhooks` -> `New Webhook`.
 Choose a name (shows up as the sender of each announcement) and set the channel for the messages. Then copy the webhook URL.

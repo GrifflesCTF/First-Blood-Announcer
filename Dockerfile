@@ -13,5 +13,7 @@ COPY first-blood-announcer.py .
 # Copy the .env file
 COPY .env .
 
+ENV PYTHONUNBUFFERED=1
+
 # Command to run the application
 CMD ["python", "first-blood-announcer.py"]
